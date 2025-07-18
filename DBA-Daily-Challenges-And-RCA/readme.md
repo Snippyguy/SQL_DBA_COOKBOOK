@@ -34,7 +34,7 @@ In my spare time I work on and play around in my home lab.
 
 #### Projects I’m currently working on
 
-- [SQL_DBA_COOKBBOK]([https://github.com/VladDBA/PSBlitz](https://github.com/Snippyguy/SQL_DBA_COOKBOOK/tree/main)) - Various T-SQL/PowerShell SQL Server-related scripts.
+- [SQL_DBA_COOKBBOK](https://github.com/Snippyguy/SQL_DBA_COOKBOOK) - Various T-SQL/PowerShell SQL Server-related scripts.
 
 
 #### On the Internet
