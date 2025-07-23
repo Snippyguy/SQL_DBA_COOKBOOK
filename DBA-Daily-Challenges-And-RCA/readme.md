@@ -30,6 +30,8 @@ In my spare time I work on and play around in my home lab.
 
 <br/>
 
+![𝚐𝚒𝚝𝚑𝚞𝚋 𝚐𝚛𝚊𝚙𝚑](https://github-readme-activity-graph.vercel.app/graph?username=Snippyguy&theme=react-dark&hide_border=true&area=true)
+
 ---
 
 #### Projects I’m currently working on
