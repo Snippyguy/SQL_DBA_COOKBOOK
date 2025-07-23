@@ -17,7 +17,7 @@ In my spare time I work on and play around in my home lab.
 #### &#x1f4c8; My GitHub Stats
 
 <a href="https://snippyguy.com">
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=Snippyguy&show_icons=true&line_height=33&count_private=true&theme=midnight-purple" alt="VladDBA's GitHub Stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=Snippyguy&show_icons=true&line_height=33&count_private=true&theme=midnight-purple" alt="Snippyguy's GitHub Stats" />
 </a>
 
 <a href="https://snippyguy.com">
