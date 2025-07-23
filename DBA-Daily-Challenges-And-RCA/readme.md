@@ -25,7 +25,7 @@ In my spare time I work on and play around in my home lab.
 </a>
 
 <a href="https://snippyguy.com">
-  <img  src="https://github-readme-streak-stats.herokuapp.com/?user=Snippyguy&theme=midnight-purple" />
+   <img src="https://streak-stats.demolab.com?user=Snippyguy&theme=midnight-purple" />
 </a>
 
 <br/>
