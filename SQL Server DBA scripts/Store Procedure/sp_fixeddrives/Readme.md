@@ -116,7 +116,7 @@ Open Source – Feel free to modify and use in your environment.
 
 ## 🔗 Resources
 
-* [Original Article (2013)]([https://www.mssqltips.com/sqlservertip/XXXX/enhanced-xp-fixeddrives-in-sql-server/](https://www.mssqltips.com/sqlservertip/3037/getting-more-details-with-an-enhanced-xpfixeddrives-for-sql-server/))
+* [Original Article (2013)](https://www.mssqltips.com/sqlservertip/3037/getting-more-details-with-an-enhanced-xpfixeddrives-for-sql-server/)
 * Microsoft Docs – [xp\_cmdshell](https://learn.microsoft.com/en-us/sql/relational-databases/system-stored-procedures/xp-cmdshell-transact-sql)
 
 ---
