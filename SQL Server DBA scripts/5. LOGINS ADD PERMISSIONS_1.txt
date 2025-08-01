@@ -1,0 +1,64 @@
+
+--================================================
+--Code Description	: LOGINS ADD PERMISSIONS_1 
+--Author Name		: Sayan Dey					  
+--Company 			: Self
+--Creation Date 	: 20/11/2023
+--Last Modified By	: 
+--Last Modification : 
+--=================================================
+
+USE [master]
+GO
+CREATE LOGIN [DOMAIN\LOGIN_NAME] FROM WINDOWS WITH DEFAULT_DATABASE = [master]
+GO 
+ALTER SERVER ROLE [dbcreator] ADD MEMBER [DOMAIN\LOGIN_NAME] 
+GO
+USE [master]
+GO 
+CREATE USER [DOMAIN\LOGIN_NAME] FOR LOGIN [DOMAIN\LOGIN_NAME]
+GO
+USE [master]
+GO 
+ALTER ROLE [db_backupoperator] ADD MEMBER [DOMAIN\LOGIN_NAME] 
+GO
+USE [master]
+GO 
+ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN\LOGIN_NAME] 
+GO
+USE [master]
+GO 
+GRANT VIEW ANY DEFINITION TO [DOMAIN\LOGIN_NAMES] 
+GO
+USE [master]
+GO
+GRANT VIEW SERVER STATE TO [DOMAIN\LOGIN_NAMES] 
+GO
+USE [model]
+GO
+CREATE USER [DOMAIN\LOGIN_NAME] FOR LOGIN [DOMAIN\LOGIN_NAMES] 
+GO
+USE [model]
+GO
+ALTER ROLE [db_backupoperator] ADD MEMBER [DOMAIN\LOGIN_NAME]
+GO 
+USE [model]
+GO
+ALTER ROLE [db_denydatareader] ADD MEMBER [DOMAIN\LOGIN_NAME]
+GO
+USE [msdb]
+GO
+CREATE USER [DOMAIN\LOGIN_NAME] FOR LOGIN [DOMAIN\LOGIN_NAME]
+GO
+USE [msdb]
+GO
+ALTER ROLE [db_backupoperator] ADD MEMBER [DOMAIN\LOGIN_NAME]
+GO
+USE [msdb]
+GO
+ALTER ROLE [db_datareader] ADD MEMBER [DOMAIN\LOGIN_NAME]
+GO
+USE [msdb]
+GO
+ALTER ROLE [db_datawriter] ADD MEMBER [DOMAIN\LOGIN_NAME]
+GO
