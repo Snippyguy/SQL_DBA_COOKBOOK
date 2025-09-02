@@ -1,5 +1,5 @@
 <h1 align="center" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#2C3E50;">
-📑 RCA Template Repository
+📑 RCA Template
 </h1>
 
 <p align="center" style="font-size:16px; color:#34495E;">
@@ -7,16 +7,12 @@ A beautifully crafted <strong>Root Cause Analysis (RCA)</strong> template to hel
 and resolve incidents with clarity and structure.  
 </p>
 
----
-
 ## 🎨 Features
 
 - ✅ Clean and professional layout  
 - ✅ Easy to customize for your project needs  
 - ✅ Well-structured sections for incident details, timeline, RCA, and corrective actions  
 - ✅ Consistent formatting for readability  
-
----
 
 ## 🖼️ Preview Look & Feel
 
@@ -33,17 +29,13 @@ and resolve incidents with clarity and structure.
     </p>
 </div>
 
----
-
 ## 🌟 Why This Template?
 
 Because solving incidents is serious, but documenting them doesn’t have to be boring.
 This template is built with clarity, aesthetics, and practicality in mind.
 
---
-
 ## 🙌 Credits
 
 If you are using this template, please give credit ⭐.
-<p align="center" style="color:#34495E; font-size:15px;"> Made with ❤️ by <strong>Snippyguy</strong> </p> ```
+<p align="center" style="color:#34495E; font-size:15px;"> Made with ❤️ by <strong>Snippyguy</strong> </p> 
 
