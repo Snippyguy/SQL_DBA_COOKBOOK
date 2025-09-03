@@ -1,53 +1,57 @@
 # 📊 Check SQL Server Instance Uptime
 
-This project explains different ways to **check SQL Server instance uptime** using built-in dashboards, Windows Event Viewer, and SQL Server error logs.  
+This guide walks you through different methods to **check SQL Server instance uptime**—via the built-in dashboard, Windows Event Viewer, and error logs.
 
-## 🔹 SQL Server Monitoring Dashboard
+##  Method 1: SQL Server Monitoring Dashboard
 
-We can view the **SQL Server instance uptime** from the SQL Server monitoring dashboard.  
-It’s a built-in report used to monitor the **real-time performance** of SQL Server instances and databases.  
-
-**Steps:**
-1. Right-click on the SQL Server connection  
-2. Hover on **Reports** → **Standard Reports**  
-3. Click on **Server Dashboard**
-
-### 🖼️ Open Server Dashboard
-In the Server Dashboard report, you can view details of the SQL Server instance.  
-The **uptime** is shown in the **Server Startup Time** field of the **Configuration Details** grid.  
-Format → `HH:MM AM/PM`
-
-![Server Dashboard](https://www.sqlshack.com/wp-content/uploads/2020/05/sql-server-uptime-server-dashboard.jpg)
-
-## 🔹 Windows Event Viewer
-
-We can also view uptime using the **Windows Event Viewer**.  
+You can quickly view the **SQL Server instance uptime** using the built-in Server Dashboard report:
 
 **Steps:**
-1. Open **Control Panel** → **Administrative Tools** → **Event Viewer**  
-2. In the Event Viewer MMC, expand **Windows Logs** → **Application**  
-3. Filter the log by **Event ID 17162**  
-4. Look for source = **MSSQLSERVER**, Level = **Information**
+1. Right-click on your SQL Server connection in SSMS  
+2. Hover over **Reports → Standard Reports**  
+3. Select **Server Dashboard**
 
-![Event Viewer](https://www.sqlshack.com/wp-content/uploads/2020/05/sql-server-uptime-event-viewer.jpg)
+In the **Configuration Details** grid, the **Server Startup Time** displays instance uptime in `HH:MM AM/PM` format.
 
+![Glimpse of Server dashboard](
+https://www.sqlshack.com/wp-content/uploads/2020/05/sql-server-uptime-server-dashboard.jpg
+)  
+*Example showing startup time: 12:10 AM.*
 
-## 🔹 SQL Server Error Log
+##  Method 2: Windows Event Viewer
 
-When SQL Server restarts, the system stored procedure **`sp_cycle_errorlog`** creates a new error log file that contains startup information.  
+You can also trace startup time through the **Windows Event Viewer**:
 
-Although not exact, it gives the **closest uptime details**.  
+**Steps:**
+1. Open **Control Panel → Administrative Tools → Event Viewer**  
+2. Expand **Windows Logs → Application**  
+3. Click **Filter Current Log…**  
+4. Filter by **Event ID**: `17162`, All levels  
+5. Locate the event with:
+   - **Source**: `MSSQLSERVER`
+   - **Level**: `Information`  
 
-**Steps in SSMS:**
-1. Open SSMS and connect to the SQL Server instance  
-2. Expand **SQL Server Agent** → **Error Logs**  
-3. Click on **Current**  
+The details pane reveals the SQL Server instance uptime.
 
-![SQL Server Error Log](https://www.sqlshack.com/wp-content/uploads/2020/05/sql-server-uptime-error-log.jpg)
+![Event Viewer](
+https://www.sqlshack.com/wp-content/uploads/2020/05/sql-server-uptime-event-viewer.jpg
+)
 
-## 🔹 Querying the Error Log
+##  Method 3: SQL Server Error Log
 
-Alternatively, use the stored procedure **`xp_readerrorlog`** to extract startup details:
+When SQL Server restarts, the `sp_cycle_errorlog` procedure rotates logs and captures startup details—not perfectly accurate, but close enough.
+
+**Viewing via SSMS:**
+1. Open SSMS and connect to your SQL Server instance  
+2. Expand **SQL Server Agent → Error Logs → Current**
+
+![View current error log](
+https://www.sqlshack.com/wp-content/uploads/2020/05/sql-server-uptime-error-log.jpg
+)
+
+##  Method 4: Querying the Error Log (via `xp_readerrorlog`)
+
+To extract startup time programmatically:
 
 ```sql
 USE master;
