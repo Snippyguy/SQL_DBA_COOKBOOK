@@ -1,5 +1,20 @@
---blocking session:
+/***********************************************************************************************
+ Blocked / Blocking Session Analysis Script
+ -----------------------------------------------------------------------------------------------
+ Description:
+   This script identifies blocking chains, blocking sessions, and detailed information about 
+   each session, including:
+     - blocking session
+     - sessions blocked by it
+     - SQL text
+     - input buffer commands
+     - wait types
+     - blocking tree ordering
+***********************************************************************************************/
 
+-----------------------------------------
+-- PART 1: Identify Blocking Chains
+-----------------------------------------
 WITH cteBL (session_id, blocking_these) AS
 
 										(SELECT s.session_id, 
@@ -12,6 +27,10 @@ WITH cteBL (session_id, blocking_these) AS
 													AND er.blocking_session_id <> 0
 													FOR XML PATH('')) AS x (blocking_these)
 )
+
+-----------------------------------------
+-- PART 2: Detailed Blocking Report
+-----------------------------------------
 SELECT	s.session_id, 
 		blocked_by = r.blocking_session_id, 
 		bl.blocking_these,
@@ -26,3 +45,5 @@ WHERE blocking_these is not null or r.blocking_session_id > 0
 ORDER BY len(bl.blocking_these) desc, 
 		 r.blocking_session_id desc, 
 		 r.session_id
+
+
