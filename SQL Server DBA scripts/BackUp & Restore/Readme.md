@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="snippyguy_logo.png" alt="SnippyGuy Logo" width="500"/>
+<img src="Image/Snippyguy%20Logo%20copy%202.png" alt="SnippyGuy" width="500"/>
 
 # 🗄️ SQL Server Backup & Restore Toolkit
 
@@ -666,7 +666,7 @@ If this repo has ever saved you from a restore nightmare, consider giving it a �
 
 ### Crafted with ☕, T-SQL, and a little bit of panic-recovery experience
 
-<img src="snippyguy_logo.png" alt="SnippyGuy" width="300"/>
+<img src="Image/Snippyguy%20Logo%20copy%202.png" alt="SnippyGuy" width="500"/>
 
 **🩹 Happy DBA — Backing up your data, one script at a time.**
 
