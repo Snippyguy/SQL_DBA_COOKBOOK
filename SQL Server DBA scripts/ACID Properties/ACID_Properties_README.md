@@ -5,7 +5,7 @@
 
 ![ACID Properties in Databases](acid-properties.png)
 
----
+
 
 ## What is ACID?
 
@@ -18,7 +18,7 @@
 
 Together, these four properties ensure that database transactions are processed reliably.
 
----
+
 
 ## 1. Atomicity — All or Nothing
 
@@ -37,7 +37,7 @@ If the system fails after deducting the money but before crediting Account B, th
 
 **Result:** Either the complete transfer happens, or nothing happens.
 
----
+
 
 ## 2. Consistency — Always Valid
 
@@ -55,7 +55,7 @@ If Account A has ₹10,000 and transfers ₹2,000 to Account B:
 
 The database must not end up with invalid or missing data.
 
----
+
 
 ## 3. Isolation — Transactions Work Independently
 
@@ -71,7 +71,7 @@ The database must prevent both customers from successfully purchasing the same s
 
 One transaction gets the seat, while the other receives an appropriate response that the seat is no longer available.
 
----
+
 
 ## 4. Durability — Once Committed, It Stays
 
@@ -85,7 +85,7 @@ You deposit ₹5,000 into your bank account and receive confirmation.
 
 Even if the banking system crashes a few seconds later, the ₹5,000 deposit should still exist when the system comes back online.
 
----
+
 
 ## 💳 One Simple Example: Money Transfer
 
@@ -118,7 +118,7 @@ The ACID properties protect this transaction:
 | **Isolation** | Other transactions do not see incorrect intermediate results. |
 | **Durability** | Once committed, the transfer remains saved. |
 
----
+
 
 ## 🧠 Easy Way to Remember ACID
 
@@ -127,7 +127,7 @@ The ACID properties protect this transaction:
 > **I — Independent Transactions**  
 > **D — Data Stays**
 
----
+
 
 ## 🔧 ACID in SQL Server
 
@@ -171,7 +171,7 @@ BEGIN CATCH
 END CATCH;
 ```
 
----
+
 
 ## 🎯 Why ACID Matters
 
@@ -186,7 +186,6 @@ Without ACID properties, databases could potentially experience:
 
 ACID provides the foundation for **trustworthy transactional systems** such as banking, e-commerce, payment processing, order management, and many enterprise applications.
 
----
 
 ## 📌 Quick Summary
 
@@ -206,7 +205,7 @@ ACID provides the foundation for **trustworthy transactional systems** such as b
 Understanding ACID is not just about remembering four database terms.  
 It is about understanding **how databases protect business-critical data when things go wrong.**
 
----
+
 
 # 🚀 Keep Learning. Keep Building. Keep Growing.
 
