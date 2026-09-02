@@ -1,3 +1,10 @@
+<p align="center">
+  <a href="https://github.com/Snippyguy/SQL_DBA_COOKBOOK">
+    <img src="https://raw.githubusercontent.com/Snippyguy/SQL_DBA_COOKBOOK/main/SQL%20Server%20DBA%20scripts/BackUp%20%26%20Restore/Image/Snippyguy%20Logo%20copy%202.png" alt="Snippyguy Logo" width="700">
+  </a>
+</p>
+
+
 # ACID Properties in Databases
 
 > **ACID properties are the foundation of reliable database transactions.**  
